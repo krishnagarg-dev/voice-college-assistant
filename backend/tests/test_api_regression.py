@@ -20,6 +20,14 @@ class ApiRegressionTests(unittest.TestCase):
         names = {tool["name"] for tool in response.json()}
         self.assertEqual(names, {"get_latest_notices", "get_upcoming_events", "get_academic_calendar", "get_timetable"})
 
+    @patch("app.main.ensure_knowledge_index", side_effect=RuntimeError("temporary source outage"))
+    def test_health_starts_even_if_rag_initialization_is_unavailable(self, initialize_index):
+        with TestClient(app) as client:
+            response = client.get("/health")
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json(), {"status": "ok"})
+        initialize_index.assert_called_once_with()
+
     @patch("app.rag.pipeline.retrieve", return_value=[])
     def test_rag_no_context_returns_structured_no_information(self, _retrieve):
         result = answer_question("Question with no indexed source")
