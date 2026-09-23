@@ -241,6 +241,7 @@ function App() {
   }
 
   function startConversation() {
+    if (sessionActiveRef.current) return;
     setError('');
     if (!SpeechRecognition) {
       setError('Voice conversation is not supported in this browser. Please use Chrome or Edge.');
@@ -248,11 +249,10 @@ function App() {
       return;
     }
     sessionActiveRef.current = true;
-    turnInProgressRef.current = false;
+    turnInProgressRef.current = true;
     setVoiceSessionActive(true);
     setHasInteracted(true);
-    setVoiceState('listening');
-    startRecognition();
+    speak('Welcome to KIET AI Assistant. How can I help you today?', { forVoiceSession: true });
   }
 
   function stopConversation() {
