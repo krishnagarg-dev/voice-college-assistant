@@ -1,0 +1,115 @@
+[
+  {
+    "url": "https://www.kiet.edu/about/Overview/",
+    "title": "KIET Overview",
+    "category": "about",
+    "source_type": "webpage",
+    "enabled": true
+  },
+  {
+    "url": "https://www.kiet.edu/programs/postgraduate-programs/",
+    "title": "KIET Postgraduate Programs",
+    "category": "programs",
+    "source_type": "webpage",
+    "enabled": true
+  },
+  {
+    "url": "https://www.kiet.edu/academics/curriculum-structure/",
+    "title": "KIET Curriculum Structure and Syllabus",
+    "category": "syllabus",
+    "source_type": "webpage",
+    "enabled": true
+  },
+  {
+    "url": "https://www.kiet.edu/academics/ordinance/",
+    "title": "KIET Rules and Regulations",
+    "category": "rules_regulations",
+    "source_type": "webpage",
+    "enabled": true
+  },
+  {
+    "url": "https://www.kiet.edu/admissions/admission-procedure/",
+    "title": "KIET Admission Procedure",
+    "category": "admissions",
+    "source_type": "webpage",
+    "enabled": true
+  },
+  {
+    "url": "https://www.kiet.edu/admissions/fee-structure/",
+    "title": "KIET Fee Structure",
+    "category": "fees",
+    "source_type": "webpage",
+    "enabled": true
+  },
+  {
+    "url": "https://www.kiet.edu/admissions/scholarship-schemes/",
+    "title": "KIET Scholarship Schemes",
+    "category": "scholarships",
+    "source_type": "webpage",
+    "enabled": true
+  },
+  {
+    "url": "https://www.kiet.edu/student-welfare/student-handbook/",
+    "title": "KIET Student Handbook",
+    "category": "student_handbook",
+    "source_type": "webpage",
+    "enabled": true
+  },
+  {
+    "url": "https://www.kiet.edu/student-welfare/anti-ragging/",
+    "title": "KIET Anti-Ragging Information",
+    "category": "anti_ragging",
+    "source_type": "webpage",
+    "enabled": true
+  },
+  {
+    "url": "https://www.kiet.edu/student-welfare/student-discipline-policy/",
+    "title": "KIET Student Discipline Policy",
+    "category": "student_discipline",
+    "source_type": "webpage",
+    "enabled": true
+  },
+  {
+    "url": "https://kiet.edu/programs/ksoca/MCA/",
+    "title": "KIET Master in Computer Application (MCA)",
+    "category": "programs",
+    "programme": "MCA",
+    "source_type": "webpage",
+    "enabled": true
+  },
+  {
+    "url": "https://kiet.edu/placements/Overview/",
+    "title": "KIET Placements Overview",
+    "category": "placements",
+    "source_type": "webpage",
+    "enabled": true
+  },
+  {
+    "url": "https://www.kiet.edu/placements/placement-recs/",
+    "title": "KIET Placement Records",
+    "category": "placements",
+    "source_type": "webpage",
+    "enabled": true
+  },
+  {
+    "url": "https://www.kiet.edu/placements/training-div/",
+    "title": "KIET Placement Training Division",
+    "category": "placements",
+    "source_type": "webpage",
+    "enabled": true
+  },
+  {
+    "url": "https://kiet.edu/placements/iipc/",
+    "title": "KIET Internship & Industry Partnership Cell (IIPC)",
+    "category": "placements",
+    "source_type": "webpage",
+    "enabled": true
+  },
+  {
+    "url": "https://kiet.edu/placements/team-crpc/",
+    "title": "KIET Corporate Relations & Placement Centre (CRPC) Team",
+    "category": "placements",
+    "source_type": "webpage",
+    "enabled": true
+  }
+]

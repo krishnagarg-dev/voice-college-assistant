@@ -1,0 +1,12 @@
+SAMPLE DATA FOR PIPELINE TESTING ONLY — NOT OFFICIAL KIET INFORMATION
+
+This file contains invented placeholder content and must never be used to describe
+the actual curriculum, schedule, policies, or facilities of KIET Deemed to be University.
+
+Sample MCA information record:
+For a retrieval test, this fictional record says the sample MCA card includes
+Sample Data Structures, Sample Database Concepts, and Sample Software Engineering.
+These are made-up test labels, not verified subjects or a real KIET syllabus.
+
+The sample record is included only to verify document loading, text splitting,
+embedding, retrieval, citations, and warnings about sample data.
