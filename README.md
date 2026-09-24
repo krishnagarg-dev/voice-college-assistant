@@ -29,7 +29,7 @@ four core ideas:
     knowledge does not verify an answer, the assistant avoids inventing
     information and can offer human/WhatsApp escalation.
 
-The project is designed as an MCA CA1 academic project while keeping the
+The project is designed as an MCA MSE-1 academic project while keeping the
 architecture suitable for future institutional integration.
 
 ------------------------------------------------------------------------
