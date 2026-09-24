@@ -370,7 +370,7 @@ function App() {
         </section>
       </main>
 
-      <footer className="site-footer"><div className="content-width footer-inner"><div className="footer-brand"><span>KIET <b>AI</b></span><small>Deemed to be University</small></div><p>College Information Assistant <span>·</span> MCA CA1 Prototype</p><a href="https://www.kiet.edu/" target="_blank" rel="noreferrer">Visit kiet.edu ↗</a></div></footer>
+      <footer className="site-footer"><div className="content-width footer-inner"><div className="footer-brand"><span>KIET <b>AI</b></span><small>Deemed to be University</small></div><p>College Information Assistant <span>·</span> Prototype</p><a href="https://www.kiet.edu/" target="_blank" rel="noreferrer">Visit kiet.edu ↗</a></div></footer>
     </div>
   );
 }
