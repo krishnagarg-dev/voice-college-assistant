@@ -18,8 +18,8 @@ export function cleanAssistantText(text) {
   cleaned = cleaned.replace(/~~/g, '');
   return cleaned;
 }
-
 export function sanitizeTextForSpeech(text) {
+
   return cleanAssistantText(text)
     .replace(/!\[([^\]]*)\]\([^)]+\)/g, '$1')
     .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
@@ -28,7 +28,7 @@ export function sanitizeTextForSpeech(text) {
     .replace(/(^|\n)\s{0,3}#{1,6}\s*/g, '$1')
     .replace(/(^|\n)\s*>\s?/g, '$1')
     .replace(/(^|\n)\s*(?:[-+*]|\d+[.)])\s+/g, '$1')
-    .replace(/\*\*|__|~~|[*_`#|\\]/g, '')
+    .replace(/\*\*\*|__|~~|[*_`#|\\]/g, '')
     .split('\n')
     .map((line) => line.trim())
     .filter(Boolean)
@@ -36,7 +36,22 @@ export function sanitizeTextForSpeech(text) {
     .replace(/\s+/g, ' ')
     .replace(/\s+([,.;:!?])/g, '$1')
     .replace(/([.!?])(?:\s*[.!?])+/g, '$1')
+
+    // Voice pronunciation fixes
+    .replace(/\bCUET\b/gi, 'C U E T')
+    .replace(/\bKIET\b/gi, 'K I E T')
+    .replace(/\bMCA\b/gi, 'M C A')
+    .replace(/\bRAG\b/gi, 'R A G')
+    .replace(/\bLLM\b/gi, 'L L M')
+    .replace(/\bAPI\b/gi, 'A P I')
+    .replace(/\bAI\b/gi, 'A I')
+    .replace(/\bPDF\b/gi, 'P D F')
+    .replace(/\bBCA\b/gi, 'B C A')
+    .replace(/\bCGPA\b/gi, 'C G P A')
+    .replace(/\bLPA\b/gi, 'L P A')
+
     .trim();
+
 }
 
 export function buildNoInformationSpeech(answer, category) {
