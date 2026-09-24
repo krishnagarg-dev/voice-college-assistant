@@ -39,6 +39,22 @@ function AssistantStateIcon({ state }) {
   return <span className="welcome-wave" aria-hidden="true">✦</span>;
 }
 
+function normalizeVoiceQuery(text) {
+  return String(text ?? '')
+    .replace(/\bk\s*i\s*e\s*t\b/gi, 'KIET')
+    .replace(/\bc\s*u\s*e\s*t\b/gi, 'CUET')
+    .replace(/\bm\s*c\s*a\b/gi, 'MCA')
+    .replace(/\br\s*a\s*g\b/gi, 'RAG')
+    .replace(/\ba\s*i\b/gi, 'AI')
+    .replace(/\ba\s*p\s*i\b/gi, 'API')
+    .replace(/\bl\s*l\s*m\b/gi, 'LLM')
+    .replace(/\bb\s*c\s*a\b/gi, 'BCA')
+    .replace(/\bc\s*g\s*p\s*a\b/gi, 'CGPA')
+    .replace(/\bl\s*p\s*a\b/gi, 'LPA')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 function App() {
   const [messages, setMessages] = useState([]);
   const [draft, setDraft] = useState('');
@@ -197,10 +213,14 @@ function App() {
       if (!finalTranscript || turnInProgressRef.current) return;
 
       turnInProgressRef.current = true;
-      setDraft(finalTranscript);
+
+      const normalizedTranscript = normalizeVoiceQuery(finalTranscript);
+
+      setDraft(normalizedTranscript);
       setVoiceState('processing');
       stopRecognition();
-      void submitQuestion(finalTranscript, true);
+
+      void submitQuestion(normalizedTranscript, true);
     };
     recognition.onerror = (event) => {
       if (recognitionRef.current !== recognition) return;
